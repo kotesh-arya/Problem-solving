@@ -538,3 +538,35 @@ function voidSquarePattern(n) {
 
 
 
+// Pattern 22
+
+function numberCoilPattern(n) {
+  let line = "";
+  let space = " ";
+  let counter = 0;
+  for (let i = 0; i < 2 * n - 1; i++) {
+    // console.log(4);
+
+        for (let j = 0; j < 2 * n - 1; j++) {
+          if (i === 0 || i === 2 * n - 2 || j === 0 || j === 2 * n - 2) {
+            line += ` ${n} `;
+          }
+        }
+
+    //     for (let j = 0; j < 2 * n - 3; j++) {
+    //       if (i === 1 || i === 2 * n - 3 || j === 1 || j === 2 * n - 3) {
+    //         line += `${n - 1}`;
+    //       }
+    //     }
+
+    // for (let j = 0; j < 3; j++) {
+    //   if (i === 2 || i === 2 * n - 5 || j === 2 || j === 2 * n - 5) {
+    //     line += `${n - 2}`;
+    //   }
+    // }
+
+    console.log(line);
+    line = "";
+  }
+}
+numberCoilPattern(4);
