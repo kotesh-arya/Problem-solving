@@ -38,3 +38,30 @@ if (result) {
 } else {
   console.log("No pair found with the given sum.");
 }
+
+// Sorting and different sorting algorithms
+// Problem  -  Given an array of integers, sort the array
+let arr = [-6, 20, 8, -2, 4];
+
+// should return [-6,-2,4,8,20]
+
+//Bubble sort Idea  -
+//  Compare adjacent elements in the array and swap the positions if they are not in the ascending order.
+//  Repeat the instruction as we step through each element in the array.
+//  Once we step through the whole array with no swaps, then the array is sorted.
+
+let swapped = false;
+do {
+  for (let i = 0; i < arr.length - 1; i++) {
+    // console.log(arr[i], arr[i + 1]);
+    if (arr[i] > arr[i + 1]) {
+      swapped = true;
+      let temp = arr[i + 1];
+      arr[i + 1] = arr[i];
+      arr[i] = temp;
+    } else {
+      swapped = false;
+    }
+  }
+} while (swapped);
+console.log(arr);  // [ -6, -2, 4, 8, 20 ] sorted 
